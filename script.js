@@ -59,10 +59,45 @@ var jhon = {
     family: ['Jane', 'Mark', 'Bob', 'Emily'],
     Job: 'teacher',
     isMarried: false,
-    calcAge: function() {
+    calcAge: function () {
         this.age = 2018 - this.birthYear;
     }
 };
 
 jhon.calcAge()
 console.log(jhon);
+
+
+
+
+/* CODING CHALLENGE */
+// who has the highest BMI
+
+var jhon = {
+    fullName: 'Jhon Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+
+
+var mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+
+if (jhon.calcBMI() > mark.calcBMI()) {
+    console.log(jhon.fullName + ' has a higher BMI of ' + jhon.bmi);
+} else if (mark.bmi > jhon.bmi) {
+    console.log(mark.fullName + ' has a higher BMI of ' + mark.bmi);
+} else {
+    console.log('They have the same BMI');
+}
