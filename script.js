@@ -101,3 +101,32 @@ if (jhon.calcBMI() > mark.calcBMI()) {
 } else {
     console.log('They have the same BMI');
 }
+
+
+//   coding challenge solution
+var jhon = {
+    fullName: 'Jhon Smith',
+    bills: [124, 48, 268, 180, 42],
+    calcTips: function() {
+        this.tips = [];
+        this.finalValues = [];
+
+        for (var i = 0; i < this.bills.length; i++) {
+            // Determine percentage based on tipping rules
+            var percentage;
+            var bills =  this.bills[i];
+
+            if (bill < 50) {
+            percentage = .2;
+            } else if (bills >= 50 && bill < 200) {
+                percentage = .15;
+            } else { 
+            percentage = .1;
+            }
+
+            //Add results to the corresponding arrays
+            this.tips[i] = bill * percentage;
+            this.finalValues[i] = bill + bill * percentage; 
+        }
+    }
+}
